@@ -25,9 +25,8 @@ echo "DISTRIB_SOURCECODE='official'" >>package/base-files/files/etc/openwrt_rele
 # Add luci-app-amlogic
 rm -rf package/luci-app-amlogic
 git clone https://github.com/ophub/luci-app-amlogic.git package/luci-app-amlogic
+rm -rf package/OpenAppFilter
 git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
-meke menuconfig
-make -j8
 #
 # Apply patch
 # git apply ../config/patches/{0001*,0002*}.patch --directory=feeds/luci
